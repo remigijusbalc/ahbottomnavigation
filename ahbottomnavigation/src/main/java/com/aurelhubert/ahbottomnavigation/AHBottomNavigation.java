@@ -220,8 +220,10 @@ public class AHBottomNavigation extends FrameLayout {
         activePaddingTop = (int) resources.getDimension(R.dimen.bottom_navigation_margin_top_active);
         activeMarginTop = (int) resources.getDimension(R.dimen.bottom_navigation_small_margin_top_active);
         widthDifference = resources.getDimension(R.dimen.bottom_navigation_small_selected_width_difference);
-        defaultIconHeight = dpToPx(R.dimen.bottom_navigation_icon);
-        defaultIconWidth = dpToPx(R.dimen.bottom_navigation_icon);
+
+		int iconHeight = resources.getDimensionPixelSize(R.dimen.bottom_navigation_icon);
+		defaultIconHeight = iconHeight;
+        defaultIconWidth = iconHeight;
 
         // Icon colors
         fill(iconActiveColor, MAX_ITEMS, null);
